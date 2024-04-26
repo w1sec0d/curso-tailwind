@@ -18,12 +18,12 @@ const NavBar = () => {
   return (
     <nav className="bg-neutral-900 h-[60px] fixed left-0 top-0 w-screen">
       <div className="flex flex-row items-center justify-between bg-neutral-900 px-4 h-full">
-        <div className="flex flex-row">
+        <div className="flex flex-row z-50">
           <SoccerBall className="translate-y-1"></SoccerBall>
-          <p className="ml-3 font-bold text-lg">Fulvo</p>
+          <p className="ml-3 font-bold text-lg z-50">Fulvo</p>
         </div>
         <div
-          className="flex absolute w-full left-0 transition-all lg:static -top-[220px] lg:ml-auto lg:top-0 lg:flex-row flex-col justify-center lg:justify-end items-center lg:items-center bg-neutral-900"
+          className="flex absolute lg:-top-80 w-full left-0 transition-all lg:static -top-[220px] lg:ml-auto lg:flex-row flex-col justify-center lg:justify-end items-center lg:items-center bg-neutral-900"
           ref={menuRef}
         >
           <NavbarLink>Inicio</NavbarLink>
@@ -33,7 +33,7 @@ const NavBar = () => {
             <Button className="my-4 lg:my-0 !mt-0">Login</Button>
           </div>
         </div>
-        <Menu className="lg:hidden" onClick={showMenu} />
+        <Menu className="lg:hidden z-50" onClick={showMenu} />
       </div>
     </nav>
   );
