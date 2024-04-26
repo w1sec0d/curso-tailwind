@@ -1,0 +1,4 @@
+- [Instala Node](https://nodejs.org/)
+- [Instala VsCode](https://code.visualstudio.com/)
+- [Documentación Tailwind Vite](https://tailwindcss.com/docs/guides/vite)
+- [Documentación Tailwind](https://tailwindcss.com/docs/)
