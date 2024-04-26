@@ -12,6 +12,7 @@ const NavBar = () => {
   const menuRef = useRef();
   const showMenu = () => {
     menuRef.current.classList.toggle("-top-[220px]");
+    menuRef.current.classList.toggle("top-[60px]");
   };
 
   return (
@@ -22,12 +23,12 @@ const NavBar = () => {
           <p className="ml-3 font-bold text-lg">Fulvo</p>
         </div>
         <div
-          className="flex absolute lg:static -top-[220px] lg:ml-auto lg:top-0 lg:flex-row flex-col justify-center items-center lg:items-center"
+          className="flex absolute w-full left-0 transition-all lg:static -top-[220px] lg:ml-auto lg:top-0 lg:flex-row flex-col justify-center lg:justify-end items-center lg:items-center bg-neutral-900"
           ref={menuRef}
         >
           <NavbarLink>Inicio</NavbarLink>
           <NavbarLink>Sobre Nosotros</NavbarLink>
-          <div className="flex flex-row items-center h-full">
+          <div className="flex flex-col lg:flex-row items-center h-full">
             <Button className="my-4 lg:my-0 !mt-0 lg:mx-3">Registrarse</Button>
             <Button className="my-4 lg:my-0 !mt-0">Login</Button>
           </div>
