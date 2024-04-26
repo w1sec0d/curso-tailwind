@@ -11,7 +11,7 @@ const NavbarLink = ({ children }) => (
 const NavBar = () => {
   const menuRef = useRef();
   const showMenu = () => {
-    menuRef.current.classList.toggle("-top-[220px]");
+    menuRef.current.classList.toggle("-top-[260px]");
     menuRef.current.classList.toggle("top-[60px]");
   };
 
@@ -23,14 +23,16 @@ const NavBar = () => {
           <p className="ml-3 font-bold text-lg z-50">Fulvo</p>
         </div>
         <div
-          className="flex absolute lg:-top-80 w-full left-0 transition-all lg:static -top-[220px] lg:ml-auto lg:flex-row flex-col justify-center lg:justify-end items-center lg:items-center bg-neutral-900"
+          className="flex absolute lg:-top-[260px] w-full left-0 transition-all lg:static -top-[260px] lg:ml-auto lg:flex-row flex-col justify-center lg:justify-end items-center lg:items-center bg-neutral-900"
           ref={menuRef}
         >
           <NavbarLink>Inicio</NavbarLink>
           <NavbarLink>Sobre Nosotros</NavbarLink>
           <div className="flex flex-col lg:flex-row items-center h-full">
-            <Button className="my-4 lg:my-0 !mt-0 lg:mx-3">Registrarse</Button>
-            <Button className="my-4 lg:my-0 !mt-0">Login</Button>
+            <Button className="my-4 lg:my-0 !lg:mt-0 lg:mx-3">
+              Registrarse
+            </Button>
+            <Button className="my-4 lg:my-0 !lg:mt-0">Login</Button>
           </div>
         </div>
         <Menu className="lg:hidden z-50" onClick={showMenu} />
